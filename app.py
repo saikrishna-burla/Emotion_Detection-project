@@ -1,10 +1,14 @@
 import streamlit as st
 import numpy as np
 import cv2
-import tensorflow as tf
+
 import requests
 import base64
 from tensorflow.keras.models import load_model
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Force CPU usage
+
+import tensorflow as tf
 
 # TMDb API Key
 TMDB_API_KEY = "fb2d107a97a8b9fccccdf093d0829d91"
